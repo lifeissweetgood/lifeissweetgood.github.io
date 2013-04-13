@@ -1,0 +1,31 @@
+<html>
+<head>
+</head>
+
+<body>
+<!-- main div -->
+<div>
+
+<div>
+<p>What in the World Can I do?</p>
+<p>A movement to promote self-fulfillment and self-awareness through servicing others in small ways.</p>
+</div>
+
+<!-- begin div to switch content -->
+<div id="randomAct">
+</div>
+
+<div id="clickButton">
+<form id="clickingForAct" action="/php/grabData.php" method="post" onsubmit="this.clickForAct(); ">
+<input type="button" id="clickForAct" value="Try me!" onsubmit="this.clickForAct(); return false;" />
+</form>
+</div>
+
+</div>
+<!-- end main div -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
