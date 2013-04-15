@@ -6,9 +6,14 @@ body
 
 }
 
-.image
+img
 {
-    padding: 0;
-    margin: 0 auto;
     border: 10px solid #fff; 
 }
+
+.image
+{
+    padding: 30px;
+    margin: 0 auto;
+}
+
