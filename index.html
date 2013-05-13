@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="css/main.css" rel="stylesheet" media="screen">
+    </head>
+
+    <body>
+        <!-- main div -->
+        <div style="background-image:url('img/dg-texture.jpg');">
+            <div class="image">
+                <img src="img/naimagreen-cityscape-besohappy2.png" />
+            </div>
+            <div>
+                <p>What in the World Can I do?</p>
+                <p>A movement to promote self-fulfillment and self-awareness through servicing others in small ways.</p>
+            </div>
+
+            <div id="randomAct">
+            </div>
+
+            <div id="clickButton">
+                <form id="clickingForAct" action="/php/grabData.php" method="post" onsubmit="this.clickForAct(); ">
+                    <input type="button" id="clickForAct" value="Try me!" onsubmit="this.clickForAct(); return false;" />
+                </form>
+            </div>
+
+        </div>
+        <!-- end main div -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

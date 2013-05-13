@@ -1,0 +1,19 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+}
+
+img
+{
+    border: 10px solid #fff; 
+}
+
+.image
+{
+    padding: 30px;
+    margin: 0 auto;
+}
+
