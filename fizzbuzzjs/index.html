@@ -20,6 +20,8 @@
                 }
                 if( e && e.preventDefault)
                     e.preventDefault();
+                else if( window.event && window.event.returnValue)
+                    window.event.returnValue = false;
                 return false;
             }
         </script>
