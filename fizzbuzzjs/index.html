@@ -1,39 +1,32 @@
 <html>
     <head>
         <script type="text/javascript">
+            function appendingElem(stringToAppend, pnode)
+            {
+                var pnodetmp = document.createElement("p");
+                pnodetmp.appendChild(document.createTextNode(stringToAppend));
+                pnode.appendChild(pnodetmp);
+            }
+
             function fizzbuzz(e)
             {
                 var num = document.forms["fizzbuzzform"]["number"].value;
                 var resultdiv = document.getElementById("result");
                 var pnode = document.createElement("p");
-                var pnodeStartMsg = document.createElement("p");
-                pnodeStartMsg.appendChild(document.createTextNode("Printing Fizzes and Buzzes!"));
-                pnode.appendChild(pnodeStartMsg);
+                appendingElem("Printing Fizzes and Buzzes!",pnode);
                 for( var i=1; i<=num; i++)
                 {
                     if( i % 15 == 0 )
-                    {
-                        var pnodetmp = document.createElement("p");
-                        pnodetmp.appendChild(document.createTextNode("FizzBuzz"));
-                        pnode.appendChild(pnodetmp);
-                    } else if( i % 5 == 0 ) {
-                        var pnodetmp = document.createElement("p");
-                        pnodetmp.appendChild(document.createTextNode("Buzz"));
-                        pnode.appendChild(pnodetmp);
-                    } else if( i % 3 == 0 ) {
-                        var pnodetmp = document.createElement("p");
-                        pnodetmp.appendChild(document.createTextNode("Fizz"));
-                        pnode.appendChild(pnodetmp);
-                    } else {
-                        var pnodetmp = document.createElement("p");
-                        pnodetmp.appendChild(document.createTextNode(i));
-                        pnode.appendChild(pnodetmp);
-                    }
+                        appendingElem("FizzBuzz",pnode);
+                    else if( i % 5 == 0 )
+                        appendingElem("Buzz", pnode);
+                    else if( i % 3 == 0 )
+                        appendingElem("Fizz", pnode);
+                    else
+                        appendingElem(i,pnode);
                     resultdiv.appendChild(pnode);
                 }
-                var pnodeEndMsg = document.createElement("p");
-                pnodeEndMsg.appendChild(document.createTextNode("----------------"));
-                pnode.appendChild(pnodeEndMsg);
+                appendingElem("----------------",pnode);
                 if( e && e.preventDefault)
                     e.preventDefault();
                 else if( window.event && window.event.returnValue)
