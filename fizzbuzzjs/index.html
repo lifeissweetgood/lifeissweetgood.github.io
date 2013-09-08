@@ -1,7 +1,7 @@
 <html>
     <head>
         <script type="text/javascript">
-            function fizzbuzz()
+            function fizzbuzz(e)
             {
                 var num = document.forms["fizzbuzzform"]["number"].value;
                 var resultdiv = document.getElementById("result");
@@ -18,6 +18,8 @@
                         pnode.appendChild(document.createTextNode(i));
                     resultdiv.appendChild(pnode);
                 }
+                if( e && e.preventDefault)
+                    e.preventDefault();
                 return false;
             }
         </script>
