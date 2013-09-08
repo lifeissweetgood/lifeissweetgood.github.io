@@ -6,6 +6,9 @@
                 var num = document.forms["fizzbuzzform"]["number"].value;
                 var resultdiv = document.getElementById("result");
                 var pnode = document.createElement("p");
+                var pnodeStartMsg = document.createElement("p");
+                pnodetmp.appendChild(document.createTextNode("Printing Fizzes and Buzzes!"));
+                pnode.appendChild(pnodeStartMsg);
                 for( var i=1; i<=num; i++)
                 {
                     if( i % 15 == 0 )
