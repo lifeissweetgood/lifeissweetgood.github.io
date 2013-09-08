@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function fizzbuzz()
+            {
+                var num = document.form["fizzbuzzform"]["number"].value;
+                var resultdiv = document.getElementById("result");
+                var pnode = document.createELement("p");
+                for( var i=1; i<=num; i++)
+                {
+                    if( i % 15 == 0 )
+                        pnode.appendChild(document.createTextNode("FizzBuzz"));
+                    else if( i % 5 == 0 )
+                        pnode.appendChild(document.createTextNode("Buzz"));
+                    else if( i % 3 == 0 )
+                        pnode.appendChild(document.createTextNode("Fizz"));
+                    else
+                        pnode.appendChild(document.createTextNode(i));
+                    resultdiv.appendChild(pnode);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="fizzbuzzform" onsubmit="fizzbuzz()">
+            Give me a number! (Must be greater than 0)
+            <input type="text" name="number"/></br>
+            <input type="submit" name="submit" value="Fizzbuzz it!"/>
+        </form>
+        <div id="result">
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    </body>
+</html>
