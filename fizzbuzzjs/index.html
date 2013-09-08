@@ -9,13 +9,23 @@
                 for( var i=1; i<=num; i++)
                 {
                     if( i % 15 == 0 )
-                        pnode.appendChild(document.createTextNode("FizzBuzz<br/>"));
-                    else if( i % 5 == 0 )
-                        pnode.appendChild(document.createTextNode("Buzz<br/>"));
-                    else if( i % 3 == 0 )
-                        pnode.appendChild(document.createTextNode("Fizz<br/>"));
-                    else
-                        pnode.appendChild(document.createTextNode(i+"<br/>"));
+                    {
+                        var pnodetmp = document.createElement("p");
+                        pnodetmp.appendChild(document.createTextNode("FizzBuzz"));
+                        pnode.appendChild(pnodetmp);
+                    } else if( i % 5 == 0 ) {
+                        var pnodetmp = document.createElement("p");
+                        pnodetmp.appendChild(document.createTextNode("Buzz"));
+                        pnode.appendChild(pnodetmp);
+                    } else if( i % 3 == 0 ) {
+                        var pnodetmp = document.createElement("p");
+                        pnodetmp.appendChild(document.createTextNode("Fizz"));
+                        pnode.appendChild(pnodetmp);
+                    } else {
+                        var pnodetmp = document.createElement("p");
+                        pnodetmp.appendChild(document.createTextNode(i));
+                        pnode.appendChild(pnodetmp);
+                    }
                     resultdiv.appendChild(pnode);
                 }
                 if( e && e.preventDefault)
